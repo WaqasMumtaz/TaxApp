@@ -10,10 +10,17 @@ function MainNavigation() {
   return (
       <Stack.Navigator
       screenOptions={{
-      headerTitleAlign:'center'
-      }}
+      headerTitleAlign:'center',
+      headerStyle:{
+         shadowColor: 'transparent', // this covers iOS
+        elevation: 0, // this covers Android
+      }
+    }
+    }
       >
-        <Stack.Screen name="List" component={Screens.Lists} />
+        <Stack.Screen name="Cases" component={Screens.Lists} />
+        <Stack.Screen name="Details" component={Screens.Details} />
+
       </Stack.Navigator>
   );
 }
