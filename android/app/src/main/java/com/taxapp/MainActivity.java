@@ -1,4 +1,4 @@
-package com.taxapp;
+package com.tax.collection.app;
 
 import com.facebook.react.ReactActivity;
 
