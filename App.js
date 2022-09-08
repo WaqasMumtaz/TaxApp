@@ -13,6 +13,8 @@ import {
 } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import MainNavigation from './src/Navigation';
+import Global from './src/Global';
+import MyStatusBar from './src/Components/StatusBar';
 
 import {
   Colors,
@@ -63,9 +65,12 @@ const App = () => {
   }, [])
 
   return (
+    <>
+        <MyStatusBar backgroundColor={Global.statusbar_bg} barStyle="light-content"/>
     <NavigationContainer>
       <MainNavigation />
     </NavigationContainer>
+    </>
 
   );
 };

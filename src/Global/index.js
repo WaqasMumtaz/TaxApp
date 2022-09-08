@@ -252,6 +252,7 @@ const countriesList = [
 ];
 
 export default {
+  statusbar_bg:'#800000',
   disabled_input:'#ececec',
   orangeColor:'#FFC107',
   topBarColor: '#e7f3ff',

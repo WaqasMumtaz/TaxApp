@@ -10,6 +10,8 @@ import pic_7 from '../../Assets/pic_7.jpg';
 import pic_8 from '../../Assets/pic_8.jpg';
 import pic_9 from '../../Assets/pic_9.jpg';
 import StarRating from 'react-native-star-rating';
+import Components from '../../Components';
+import Global from '../../Global';
 
 
 export default function Details({ navigation, route }) {
@@ -18,6 +20,8 @@ export default function Details({ navigation, route }) {
     // console.log('Navigation Data ****>>>>>>', case_data)
     return (
         <>
+        {/* <Components.MyStatusBar backgroundColor={Global.statusbar_bg} barStyle="light-content"/> */}
+
             <View style={{ flex: 0.7 }}>
                 <Image source={case_data.pic == 1 ?
                     pic_1 : case_data.pic == 2
@@ -69,8 +73,9 @@ export default function Details({ navigation, route }) {
                             <Text style={{fontWeight:'bold', textDecorationLine:'underline'}}>Description</Text>
                         </View>
                         <View>
-                            <Text style={{textAlign:'center'}}>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</Text>
-                            <Text style={{textAlign:'center', marginTop:10}}>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</Text>
+                            <Text style={{textAlign:'center'}}>{case_data.detail}</Text>
+                            {/* <Text style={{textAlign:'center'}}>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</Text> */}
+                            {/* <Text style={{textAlign:'center', marginTop:10}}>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</Text> */}
 
                         </View>
                         <View style={{marginBottom:20}}/>
